@@ -140,6 +140,16 @@ int main() {
 	float occlusion = subgridOpac.computeOcclusion(origin, direction, maxBB, minBB, centersBB);
 	
 	cout << "occlusion: " << occlusion << endl;
+	
+	//deleting new arrays - do not delete centersBB if you want to keep using the representations
+	delete[] normals;
+	delete[] colors;
+	delete[] hitsPosition;
+
+	delete[] raysDirection;
+	delete[] raysOrigin;
+	delete[] raysHit;
+	delete[] centersBB;
 
 	return 0;
 }
